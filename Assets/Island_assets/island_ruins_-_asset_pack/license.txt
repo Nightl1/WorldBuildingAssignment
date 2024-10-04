@@ -1,0 +1,11 @@
+Model Information:
+* title:	Island Ruins - Asset Pack
+* source:	https://sketchfab.com/3d-models/island-ruins-asset-pack-610abb17b62d4812a6e53541f53cc405
+* author:	sheamkennedy (https://sketchfab.com/sheamkennedy)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Island Ruins - Asset Pack" (https://sketchfab.com/3d-models/island-ruins-asset-pack-610abb17b62d4812a6e53541f53cc405) by sheamkennedy (https://sketchfab.com/sheamkennedy) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

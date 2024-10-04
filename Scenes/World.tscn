@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://c1683exwli55e"]
+
+[ext_resource type="Texture2D" uid="uid://ynfppilssbsy" path="res://Assets/sky.exr" id="1_4xq5l"]
+[ext_resource type="Material" uid="uid://dp285na24ru5r" path="res://Materials/groundRockMaterial.tres" id="2_fnbsy"]
+[ext_resource type="PackedScene" uid="uid://2xgfh78a4giq" path="res://Scenes/performance_tracker.tscn" id="3_ys4y5"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_cw3c4"]
+panorama = ExtResource("1_4xq5l")
+
+[sub_resource type="Sky" id="Sky_ho6vq"]
+sky_material = SubResource("PanoramaSkyMaterial_cw3c4")
+
+[sub_resource type="Environment" id="Environment_j20yy"]
+background_mode = 2
+sky = SubResource("Sky_ho6vq")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_qggjg"]
+material = ExtResource("2_fnbsy")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_j20yy")
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0, 0)
+mesh = SubResource("PlaneMesh_qggjg")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 27.8323, 44.5683)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="PerformanceTracker" parent="UI" instance=ExtResource("3_ys4y5")]
